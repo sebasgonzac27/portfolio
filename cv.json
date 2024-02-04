@@ -1,0 +1,114 @@
+{
+    "basics": {
+      "name": "Juan Sebastian Gonzalez Camacho",
+      "shortName": "Juan Gonzalez",
+      "label": "Desarrollador Junior",
+      "image": "",
+      "email": "sebasgonzac27@gmail.com",
+      "phone": "+57 317 5852505",
+      "url": "https://sebasgonzac27.github.io/",
+      "summary": "Soy un desarrollador junior con experiencia en desarrollo web y aplicaciones móviles. Me apasiona la tecnología y la programación, siempre estoy buscando aprender nuevas tecnologías y mejorar mis habilidades.",
+      "location": {
+        "address": "",
+        "postalCode": "",
+        "city": "Tuluá",
+        "countryCode": "CO",
+        "region": "Valle del Cauca"
+      },
+      "profiles": [{
+        "network": "LinkedIn",
+        "username": "Juan Sebastian Gonzalez Camacho",
+        "url": "https://www.linkedin.com/in/sebasgonzac/"
+      },
+      {
+        "network": "GitHub",
+        "username": "sebasgonzac27",
+        "url": "https://github.com/sebasgonzac27"
+      } 
+    ]
+    },
+    "work": [{
+      "name": "Universidad del Valle",
+      "position": "Monitor de Oficina de Informática y Telecomunicaciones", 
+      "url": "https://univalle.edu.co",
+      "startDate": "2022",
+      "endDate": "Actual",
+      "summary": "Monitor de la oficina de informática y telecomunicaciones de la Universidad del Valle, brindando soporte técnico a los usuarios de la universidad.",
+      "highlights": [
+        "Soporte técnico a usuarios",
+        "Mantenimiento de equipos de cómputo"
+      ]
+    }],
+      "education": [{
+      "institution": "Universidad del Valle",
+      "url": "https://univalle.edu.co",
+      "area": "Ingeniería de Sistemas",
+      "studyType": "Pregrado",
+      "startDate": "2019",
+      "endDate": "2025",
+      "score": "4.6",
+      "courses": [
+        "Programación Orientada a Objetos",
+        "Estructuras de Datos",
+        "Bases de Datos",
+        "Redes de Computadores",
+        "Sistemas Operativos",
+        "Ingeniería de Software",
+        "Inteligencia Artificial",
+        "Desarrollo de Aplicaciones Móviles"
+      ]
+    }],
+    "awards": [{
+      "title": "Estímulos Académicos",
+      "date": "2024",
+      "awarder": "Universidad del Valle",
+      "summary": "Estímulo académico otorgado por la Universidad del Valle por obtener un promedio superior a 4.0"
+    }],
+    "certificates": [{
+      "name": "Certificate",
+      "date": "2021-11-07",
+      "issuer": "Company",
+      "url": "https://certificate.com"
+    }],
+    "publications": [{
+      "name": "Publication",
+      "publisher": "Company",
+      "releaseDate": "2014-10-01",
+      "url": "https://publication.com",
+      "summary": "Description…"
+    }],
+    "skills": [{
+      "name": "Web Development",
+      "level": "Master",
+      "keywords": [
+        "HTML",
+        "CSS",
+        "JavaScript"
+      ]
+    }],
+    "languages": [{
+      "language": "English",
+      "fluency": "Native speaker"
+    }],
+    "interests": [{
+      "name": "Wildlife",
+      "keywords": [
+        "Ferrets",
+        "Unicorns"
+      ]
+    }],
+    "references": [{
+      "name": "Jane Doe",
+      "reference": "Reference…"
+    }],
+    "projects": [{
+      "name": "Project",
+      "startDate": "2019-01-01",
+      "endDate": "2021-01-01",
+      "description": "Description...",
+      "highlights": [
+        "Won award at AIHacks 2016"
+      ],
+      "url": "https://project.com/"
+    }]
+  }

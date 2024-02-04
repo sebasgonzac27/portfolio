@@ -1,10 +1,55 @@
-<section id="about">
-  <h1>Sobre Mí</h1>
-</section>
+---
+import Section from "./Section.astro";
+---
+
+<Section name="Sobre mí" id="about">
+  <div id="container">
+    <picture class="photo-box"
+      ><img src="/images/photo.webp" alt="Foto de perfil" /></picture
+    >
+    <article class="info"></article>
+  </div>
+</Section>
 
 <style>
-  section {
-    width: 1200px;
-    margin-block: 50px;
+  #container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: start;
+
+    .photo-box {
+      display: grid;
+      place-content: center;
+      width: 150px;
+      height: 150px;
+      background-color: #323150;
+      border-radius: 50%;
+      overflow: hidden;
+      object-fit: fill;
+
+      img {
+        width: 150px;
+        height: 150px;
+        object-fit: cover;
+      }
+    }
+
+    .info {
+      width: 1000px;
+      height: 200px;
+      border-radius: 1rem;
+      background-color: #fff;
+    }
+  }
+
+  @media screen and (max-width: 400px) {
+    #container {
+      flex-direction: column;
+
+      .info {
+        width: 100%;
+      }
+    }
   }
 </style>

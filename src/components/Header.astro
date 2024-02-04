@@ -1,0 +1,97 @@
+---
+import { basics } from "@cv";
+
+const ROUTES = [
+  { name: "Sobre Mí", path: "#about", label: "about" },
+  { name: "Habilidades", path: "#skills", label: "skills" },
+  { name: "Experiencia", path: "#experience", label: "experience" },
+  { name: "Proyectos", path: "#projects", label: "projects" },
+];
+---
+
+<header id="navbar-box">
+  <nav class="navbar">
+    <a class="brand-tag" href="#hero">
+      {basics.shortName}
+    </a>
+    <ul class="navbar-list">
+      {
+        ROUTES.map((route) => (
+          <li class="navbar-item">
+            <a href={route.path} aria-label={route.label}>
+              {route.name}
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+  </nav>
+</header>
+
+<style>
+  #navbar-box {
+    top: 0;
+    left: 0;
+    display: flex;
+    position: fixed;
+    width: 100%;
+    height: 60px;
+    z-index: 10;
+    background-color: #323150;
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+
+      @media only screen and (max-width: 768px) {
+        .brand-tag {
+          display: none;
+        }
+      }
+
+      .brand-tag {
+        text-decoration: none;
+        font-size: 1.5rem;
+        display: flex;
+        gap: 10px;
+        font-family: "Barlow-Bold";
+        color: #f0eff5;
+        padding: 10px 15px;
+        border-radius: 40px;
+
+        &:hover {
+          text-decoration: underline;
+          background-color: #454465;
+          color: #ffbf00;
+        }
+      }
+
+      .navbar-list {
+        display: flex;
+        gap: 10px;
+        list-style: none;
+
+        .navbar-item {
+          a {
+            text-decoration: none;
+            color: #f0eff5;
+            font-family: "Barlow-Bold";
+            padding: 10px 15px;
+            border-radius: 40px;
+            transition: all 0.2s ease;
+
+            &:hover {
+              text-decoration: underline;
+              color: #ffbf00;
+              background-color: #454465;
+            }
+          }
+        }
+      }
+    }
+  }
+</style>

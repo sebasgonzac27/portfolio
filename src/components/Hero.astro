@@ -1,0 +1,162 @@
+---
+import { basics } from "@cv";
+import GitHub from "@/components/icons/GitHub.astro";
+import LinkedIn from "@/components/icons/LinkedIn.astro";
+import Mail from "@/components/icons/Mail.astro";
+import type { SocialIcon } from "@/types";
+
+const SOCIAL_ICONS: SocialIcon = {
+  GitHub,
+  LinkedIn,
+  Mail,
+};
+---
+
+<section id="hero">
+  <div class="hero-box">
+    <div class="me-box">
+      <picture>
+        <img src="/images/profile.svg" width="130px" />
+      </picture>
+      <div class="title-box">
+        <h1>{basics.name}</h1>
+        <h2>{basics.label}</h2>
+      </div>
+    </div>
+    <div class="social-box">
+      <a
+        href={`mailto:${basics.email}`}
+        target="_blank"
+        title="Email"
+        rel="noopener noreferrer"
+      >
+        <Mail />
+      </a>
+      {
+        basics.profiles.map((profile) => {
+          const Icon = SOCIAL_ICONS[profile.network];
+
+          return (
+            <a
+              href={profile.url}
+              target="_blank"
+              title={profile.network}
+              rel="noopener noreferrer"
+            >
+              <Icon />
+            </a>
+          );
+        })
+      }
+    </div>
+    <button class="contact">Ver mi CV</button>
+  </div>
+</section>
+
+<style>
+  section {
+    display: grid;
+    place-content: center;
+    width: 100%;
+    height: 100vh;
+    background-color: #323150;
+
+    &:before {
+      content: " ";
+      display: block;
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+      opacity: 0.1;
+      background-image: url(../assets/images/background.svg);
+      background-repeat: no-repeat;
+      background-position: 0 30%;
+    }
+
+    .hero-box {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      z-index: 2;
+      gap: 25px;
+
+      .me-box {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+
+        picture {
+          display: grid;
+          place-content: center;
+          background-color: #ffbf00;
+          width: 160px;
+          height: 160px;
+          border-radius: 50%;
+          object-fit: cover;
+          box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+        }
+
+        .title-box {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+
+          h1 {
+            font-size: 2.5rem;
+            margin: 0;
+            color: #f0eff5;
+            text-align: center;
+          }
+
+          h2 {
+            font-family: "Barlow-Semibold";
+            font-size: 1.5rem;
+            margin: 0;
+            color: #f0eff5;
+            text-align: center;
+          }
+        }
+      }
+
+      .social-box {
+        display: flex;
+        gap: 5px;
+
+        a {
+          width: 30px;
+          height: 30px;
+          color: #f0eff5;
+          border-radius: 50%;
+          padding: 10px;
+          transition: all 0.2s ease;
+
+          &:hover {
+            color: #ffbf00;
+            background-color: #454465;
+          }
+        }
+      }
+
+      .contact {
+        padding: 0.8rem 1.5rem;
+        border: none;
+        border-radius: 50px;
+        background-color: #ff5252;
+        color: #f0eff5;
+        font-size: 1rem;
+        font-weight: 600;
+        cursor: pointer;
+        transition: background-color 0.3s;
+
+        &:hover {
+          background-color: #f0eff5;
+          color: #323150;
+        }
+      }
+    }
+  }
+</style>
